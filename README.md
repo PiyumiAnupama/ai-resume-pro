@@ -1,70 +1,151 @@
-# Getting Started with Create React App
+# 🤖 AI Resume Pro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Gemini API](https://img.shields.io/badge/Gemini_API-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://aistudio.google.com/)
 
-## Available Scripts
+An AI powered resume analyzer that checks your resume for **ATS (Applicant Tracking System) compatibility**, gives you a real time score, and delivers intelligent optimization suggestions.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🌟 Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Job seekers often lose opportunities because their resumes are filtered out by ATS software before a human ever reads them. **AI Resume Pro** solves this problem by instantly analyzing your resume and telling you exactly what to fix.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Key Benefits:**
 
-### `npm test`
+- 🎯 **Know your ATS score** before you apply
+- 🔍 **Understand why** your resume is being rejected
+- 💡 **Get specific suggestions** to improve it instantly
+- ⚡ **Real-time feedback** — no waiting, no guessing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🎬 Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://github.com/PiyumiAnupama/ai-resume-pro/raw/master/public/1.mp4
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✨ Features
 
-### `npm run eject`
+- 📄 **Resume Upload** — Upload your resume in PDF format
+- 🤖 **AI Analysis** — Gemini API evaluates content against ATS best practices
+- 📊 **ATS Score** — Get a compatibility score with a detailed breakdown
+- 🔍 **Keyword Suggestions** — See which keywords are missing for your target role
+- 💾 **Save Results** — Analysis history stored in MongoDB
+- 📱 **Responsive UI** — Works on desktop and mobile browsers
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠 Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Category | Details |
+|---|---|
+| Frontend | React.js, CSS |
+| Backend | Python, Node.js |
+| Database | MongoDB |
+| AI Integration | Google Gemini API |
+| Tools | VS Code, Postman, Git, GitHub |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## ⚙️ Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Node.js](https://nodejs.org/) v16 or above
+- [Python](https://www.python.org/) v3.8 or above
+- [MongoDB](https://www.mongodb.com/) (local or Atlas cloud)
+- A [Google Gemini API Key](https://aistudio.google.com/app/apikey)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 📦 Installation
 
-### Analyzing the Bundle Size
+**1. Clone the repository**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+git clone https://github.com/PiyumiAnupama/ai-resume-pro.git
+cd ai-resume-pro
+```
 
-### Making a Progressive Web App
+**2. Install and run the Frontend**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm install
+npm start
+```
 
-### Advanced Configuration
+The React app will open at `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**3. Install and run the Backend**
 
-### Deployment
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+### 🔑 Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Create a `.env` file inside the `backend/` folder and add:
+
+```env
+GEMINI_API_KEY=your_google_gemini_api_key_here
+MONGO_URI=your_mongodb_connection_string_here
+PORT=5000
+```
+
+> ⚠️ Never commit your `.env` file. It is already included in `.gitignore`.
+
+---
+
+## 📁 Project Structure
+
+```
+ai-resume-pro/
+│
+├── public/               # Static assets
+├── src/                  # React frontend source
+│   ├── components/       # Reusable UI components
+│   ├── pages/            # App pages/views
+│   └── App.js            # Root component
+│
+├── backend/              # Python backend
+│   ├── app.py            # Server entry point
+│   └── requirements.txt  # Python dependencies
+│
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+---
+
+## 🗺️ Roadmap
+
+- [x] Resume upload and parsing
+- [x] ATS compatibility scoring with Gemini API
+- [x] Keyword gap analysis and suggestions
+- [ ] Job description matching (paste a JD, get tailored feedback)
+- [ ] User login and personal history dashboard
+- [ ] Export analysis report as PDF
+- [ ] DOCX resume format support
+
+---
+
+## 📧 Contact
+
+**Anupama Piyadigama**
+
+- 💼 LinkedIn: [linkedin.com/in/anupamapiyadigama](https://linkedin.com/in/anupamapiyadigama)
+- 🐙 GitHub: [github.com/PiyumiAnupama](https://github.com/PiyumiAnupama)
+- 🎨 Behance: [behance.net/piyumianupama1](https://behance.net/piyumianupama1)
+
+---
+
+*Built with 💻 by Anupama Piyadigama | 2025*
